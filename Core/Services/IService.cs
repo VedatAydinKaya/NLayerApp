@@ -20,7 +20,7 @@ namespace Core.Services
         Task AddAsync(T entity);
         Task AddRangeAsync(IEnumerable<T> entities);
 
-        Task UpdateAsync(T entity);
+        Task UpdateAsync(T entity); // SaveChangesAsync()
         Task RemoveAsync(T entity);
         Task RemoveRangeAsync(IEnumerable<T> entities);
     }
