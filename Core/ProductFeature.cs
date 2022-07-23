@@ -8,13 +8,13 @@ namespace Core
 {
     public class ProductFeature
     {
-        public ProductFeature(string color)
-        {
-            Color=color ?? throw new ArgumentNullException(nameof(Color)); 
-        }
+        //public ProductFeature(string color)
+        //{
+        //    Color=color ?? throw new ArgumentNullException(nameof(Color)); 
+        //}
 
         public int Id { get; set; }
-        public string Color { get; set; }
+        public string? Color { get; set; }
         public int Height { get; set; }
         public int Width { get; set; }
 

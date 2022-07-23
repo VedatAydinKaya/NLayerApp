@@ -31,6 +31,28 @@ namespace Repository
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());  // configures all type  named interface(IEntityTypeConfiguration) by doing reflection
 
 
+            modelBuilder.Entity<ProductFeature>().HasData(new ProductFeature()
+            {
+
+                Id = 1,
+                ProductId = 1,
+                Color = "Siyah",
+                Height = 20,
+                Width = 120
+            },
+            new ProductFeature()
+            {
+
+                Id = 2,
+                ProductId = 2,
+                Color = "Mavi",
+                Height = 20,
+                Width = 120
+            }); ;
+
+
+
+
             base.OnModelCreating(modelBuilder); 
         }
 
