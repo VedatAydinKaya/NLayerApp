@@ -50,9 +50,6 @@ namespace Repository
                 Width = 120
             }); ;
 
-
-
-
             base.OnModelCreating(modelBuilder); 
         }
 
