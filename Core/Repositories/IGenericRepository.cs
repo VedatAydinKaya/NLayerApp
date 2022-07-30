@@ -12,7 +12,7 @@ namespace Core.Repositories
         Task<T> GetByIdAsync(int id);
 
         // productRepository.GetAll(x=>x.Id>5).OrderBy.ToListAsync();
-        IQueryable<T> GetAll(Expression<Func<T, bool>> expression);
+        IQueryable<T> GetAll();
 
 
         // productRepository.Where(x=>x.Id>5).OrderBy.ToListAsync(); *** 

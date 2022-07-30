@@ -22,7 +22,7 @@ namespace Repository.Repositories
 
         public async Task AddAsync(T entity)
         {
-          await _dbSet.AddAsync(entity);  // Efcore method
+          await _dbSet.AddAsync(entity);   // EfCore method
         }
 
         public async Task AddRangeAsync(IEnumerable<T> entities)
@@ -35,7 +35,7 @@ namespace Repository.Repositories
             return await _dbSet.AnyAsync(expression);
         }
 
-        public IQueryable<T> GetAll(Expression<Func<T, bool>> expression)
+        public IQueryable<T> GetAll()
         {
             return _dbSet.AsNoTracking().AsQueryable();
 
