@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class GenericRepository<T> : IGenericRepository<T> where T : class // T is an entity type
-    {
+    public class GenericRepository<T> : IGenericRepository<T> where T : class // T is an entity type 
+    {  
+           // sets to memory interface def.
         protected readonly AppDbContext _context;
         private readonly DbSet<T> _dbSet;
 
@@ -27,7 +28,7 @@ namespace Repository.Repositories
 
         public async Task AddRangeAsync(IEnumerable<T> entities)
         {
-            await _dbSet.AddRangeAsync(entities);
+            await _dbSet.AddRangeAsync(entities); 
         }
 
         public async Task<bool> AnyAsync(Expression<Func<T, bool>> expression)
