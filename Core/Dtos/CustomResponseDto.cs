@@ -9,6 +9,11 @@ namespace Core.Dtos
 {
     public class CustomResponseDto<T>
     {
+        //public static class NoContentDto
+        //{
+          
+        //}
+
         private int yas;
 
         //public CustomResponseDto( int yas)
@@ -31,7 +36,7 @@ namespace Core.Dtos
         /*   STATIC FACTORY METHODS  */ 
 
         public static CustomResponseDto<T> Success(T data, int statusCode)  // when endpoints responds a requests successfully
-                                                                            //       that will be returbed dtos as an static methods
+                                                                            //       that will be returned dtos as an static methods
 
         {
             return new CustomResponseDto<T> { Data = data, StatusCode = statusCode, Errors = null };

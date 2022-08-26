@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Core.Dtos
 {
     public class ProductDto:BaseDto
+
     {
         public string? Name { get; set; }
         public int Stock { get; set; }
